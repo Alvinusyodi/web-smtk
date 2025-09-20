@@ -1,12 +1,37 @@
-# React + Vite
+# Panduan Data Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website ini membutuhkan beberapa data dan informasi agar dapat berjalan dengan baik dan menampilkan konten secara lengkap. Pastikan semua data berikut telah disiapkan sebelum mulai mengisi atau menambahkan konten ke website.
 
-Currently, two official plugins are available:
+## 1. About Us
+- Deskripsi singkat mengenai perusahaan, organisasi, atau individu.
+- Visi dan misi (opsional, tapi disarankan).
+- Sejarah singkat (opsional).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 2. Services / Layanan
+- Daftar layanan atau produk yang ditawarkan.
+- Deskripsi singkat masing-masing layanan.
+- Ikon atau gambar untuk setiap layanan (opsional).
 
-## Expanding the ESLint configuration
+## 3. Foto / Gambar
+- Foto profil, tim, atau fasilitas.
+- Gambar pendukung konten, seperti banner atau ilustrasi.
+- Pastikan gambar memiliki ukuran yang sesuai untuk website.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 4. Informasi Alamat
+- Alamat lengkap kantor atau lokasi utama.
+- Peta lokasi (opsional, bisa dari Google Maps).
+
+## 5. Kontak
+- Email resmi untuk komunikasi.
+- Nomor telepon yang dapat dihubungi.
+- Link media sosial (opsional).
+
+## 6. Cara Pemesanan / Ketentuan
+- Penjelasan mengenai proses pemesanan atau layanan.
+- Syarat dan ketentuan yang berlaku.
+- Informasi pembayaran atau konfirmasi (jika ada).
+
+## Catatan
+- Pastikan semua data telah diperiksa dan valid.
+- Gunakan format konsisten agar tampilan website rapi.
+- Data ini akan digunakan untuk mengisi halaman website, termasuk bagian `About Us`, `Services`, `Contact`, dan lainnya.
