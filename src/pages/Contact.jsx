@@ -7,41 +7,44 @@ import {
     ArrowRight,
     CheckCircle2
 } from "lucide-react";
+import { useState } from "react";
 
 const Contact = () => {
+
+    const [showMap, setShowMap] = useState(false);
 
     const contactInfo = [
         {
             icon: Phone,
             title: "Telepon",
-            details: ["+62 21 1234 5678", "+62 811 2345 6789"],
+            details: ["(031) 51503872", "(031) 51504725", "(031) 51501857"],
             description: "Hubungi kami untuk konsultasi cepat"
         },
         {
             icon: Mail,
             title: "Email",
-            details: ["info@truckexpress.id", "cs@truckexpress.id"],
+            details: ["mail@suryatransport.com", "www.suryatransport.com"],
             description: "Kirim pertanyaan detail melalui email"
         },
         {
             icon: MapPin,
             title: "Alamat",
-            details: ["Jl. Raya Logistik No. 123", "Jakarta 12345, Indonesia"],
-            description: "Kunjungi kantor pusat kami"
+            details: ["Jl. Jemur Andayani 50 Blok A/18", "Surabaya 60237", "Jawa Timur, Indonesia"],
+            description: "Datangi kantor kami"
         },
         {
             icon: Clock,
             title: "Jam Operasional",
-            details: ["Senin - Jumat: 08:00 - 18:00", "Sabtu: 08:00 - 16:00"],
-            description: "Layanan tracking 24/7"
+            details: ["Senin - Jumat: 08:00 - 17:00 WIB", "Sabtu: 08:00 - 12:00 WIB"],
+            description: "24/7 Emergency Support"
         }
     ];
 
     const offices = [
         {
-            city: "Jakarta",
-            address: "Jl. Raya Logistik No. 123, Jakarta 12345",
-            phone: "+62 21 1234 5678",
+            city: "Surabaya",
+            address: "Jl. Jemur Andayani 50 Blok A/18, Surabaya 60237",
+            phone: "(031) 51503872",
             status: "Kantor Pusat"
         },
         {
@@ -189,17 +192,31 @@ const Contact = () => {
                             <MapPin className="w-16 h-16 text-primary mb-4" />
                             <h3 className="text-2xl font-bold mb-2">Kantor Pusat TruckExpress</h3>
                             <p className="text-muted-foreground mb-4">
-                                Jl. Raya Logistik No. 123, Jakarta 12345, Indonesia
+                                Jl. Jemur Andayani 50 Blok A/18 Surabaya 60237 Jawa Timur, Indonesia
                             </p>
-                            <a
-                                href="https://maps.google.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center bg-accent text-white px-6 py-3 rounded-lg hover:opacity-90 transition"
-                            >
-                                Buka di Google Maps
-                                <ArrowRight className="w-4 h-4 ml-2" />
-                            </a>
+                            <div className="text-center mt-10">
+                                {!showMap ? (
+                                    <button
+                                        onClick={() => setShowMap(true)}
+                                        className="inline-flex items-center bg-accent text-white px-6 py-3 rounded-lg hover:opacity-90 transition"
+                                    >
+                                        Buka di Google Maps
+                                        <ArrowRight className="w-4 h-4 ml-2" />
+                                    </button>
+                                ) : (
+                                    <div className="w-full h-full">
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.2264662642706!2d112.73123209678957!3d-7.328442500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb41cd3cb1e7%3A0x1a10d2ee61791a90!2sSurya%20Transport%20Group!5e0!3m2!1sen!2sid!4v1758684267579!5m2!1sen!2sid"
+                                            width="100%"
+                                            height="100%"
+                                            style={{ border: 0 }}
+                                            allowFullScreen=""
+                                            loading="lazy"
+                                            referrerPolicy="no-referrer-when-downgrade"
+                                        ></iframe>
+                                    </div>
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -218,10 +235,10 @@ const Contact = () => {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <button className="bg-accent text-white px-6 py-3 rounded-lg font-medium flex items-center justify-center hover:opacity-90 transition">
-                                <Phone className="w-5 h-5 mr-2" /> Hotline 24/7: +62 811 TRUCK-ID
+                                <Phone className="w-5 h-5 mr-2" /> Hotline 24/7: (031) 51503872
                             </button>
                             <button className="border border-white/30 bg-white/10 text-white px-6 py-3 rounded-lg font-medium flex items-center justify-center hover:bg-white/20 transition">
-                                <MessageCircle className="w-5 h-5 mr-2" /> Live Chat
+                                <MessageCircle className="w-5 h-5 mr-2" /> WhatApps
                             </button>
                         </div>
                     </div>

@@ -1,60 +1,58 @@
 import { Link } from "react-router-dom";
 import {
-    Package,
-    Truck,
-    Clock,
+    Droplets,
+    Factory,
+    Beaker,
     Shield,
-    MapPin,
-    CheckCircle2,
+    Users,
     ArrowRight,
-    Container,
-    Settings,
-    Calendar
+    CheckCircle
 } from "lucide-react";
 
 const Services = () => {
-    const mainServices = [
+
+    const serviceFeatures = [
         {
-            icon: Package,
-            title: "Pengiriman Kargo (FCL/LCL)",
-            description: "Layanan pengiriman barang dalam jumlah besar dengan container penuh (FCL) atau berbagi container (LCL)",
-            features: [
-                "Container 20ft dan 40ft",
-                "Door to door service",
-                "Custom clearance",
-                "Dokumentasi lengkap"
-            ],
-            popular: true
+            icon: <Droplets className="h-8 w-8 text-blue-700" />,
+            title: 'Transportasi Cairan Curah Khusus',
+            description: 'Layanan utama kami adalah transportasi cairan curah khusus dalam volume besar dengan standar keamanan tinggi.'
         },
         {
-            icon: Calendar,
-            title: "Logistik Kontrak",
-            description: "Solusi logistik jangka panjang untuk kebutuhan rutin perusahaan dengan kontrak khusus",
-            features: [
-                "Jadwal pengiriman tetap",
-                "Harga khusus kontrak",
-                "Dedicated customer service",
-                "Reporting berkala"
-            ]
+            icon: <Shield className="h-8 w-8 text-green-600" />,
+            title: 'Standar Keamanan Tinggi',
+            description: 'Menggunakan armada tangki khusus yang memenuhi standar keamanan dan kebersihan internasional.'
         },
         {
-            icon: Settings,
-            title: "Sewa Truk Khusus",
-            description: "Layanan sewa truk dengan spesifikasi khusus untuk kebutuhan pengiriman tertentu",
-            features: [
-                "Berbagai jenis truk",
-                "Driver berpengalaman",
-                "Flexible scheduling",
-                "GPS tracking"
-            ]
+            icon: <Factory className="h-8 w-8 text-blue-700" />,
+            title: 'Melayani Berbagai Industri',
+            description: 'Melayani berbagai skala industri dari UKM hingga perusahaan multinasional dengan solusi yang fleksibel.'
+        },
+        {
+            icon: <Users className="h-8 w-8 text-green-600" />,
+            title: 'Tim Profesional',
+            description: 'Didukung tim berpengalaman yang memahami karakteristik dan penanganan khusus setiap jenis cairan.'
         }
     ];
 
-    const additionalServices = [
-        { icon: Shield, title: "Asuransi Barang", description: "Perlindungan menyeluruh untuk barang Anda selama perjalanan" },
-        { icon: Clock, title: "Express Delivery", description: "Layanan pengiriman cepat untuk kebutuhan mendesak" },
-        { icon: MapPin, title: "Tracking Real-time", description: "Pantau posisi barang Anda secara real-time via aplikasi" },
-        { icon: Container, title: "Warehousing", description: "Layanan penyimpanan sementara di gudang modern kami" }
+    const liquidTypes = [
+        {
+            category: 'Bahan Kimia',
+            icon: <Beaker className="h-8 w-8 text-red-600" />,
+            description: 'Pengangkutan berbagai jenis bahan kimia industri dengan standar keamanan tertinggi',
+            examples: ['Asam sulfat', 'Caustic soda', 'Pelarut industri', 'Bahan kimia dasar']
+        },
+        {
+            category: 'Minyak Nabati',
+            icon: <Droplets className="h-8 w-8 text-yellow-600" />,
+            description: 'Transportasi minyak nabati dengan menjaga kualitas dan kemurnian produk',
+            examples: ['Minyak kelapa sawit', 'Minyak kedelai', 'Minyak kelapa', 'Minyak jagung']
+        },
+        {
+            category: 'Cairan Food Grade',
+            icon: <Shield className="h-8 w-8 text-green-600" />,
+            description: 'Pengangkutan cairan untuk industri makanan dan minuman dengan sertifikasi halal',
+            examples: ['Sirup', 'Konsentrat minuman', 'Minyak goreng', 'Bahan makanan cair']
+        }
     ];
 
     const processSteps = [
@@ -86,96 +84,48 @@ const Services = () => {
                 </div>
             </section>
 
-            {/* Main Services */}
-            <section className="py-20 bg-background">
+            {/* Service Features */}
+            <section className="py-20">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                            Layanan Utama Kami
-                        </h2>
-                        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                            Pilih layanan yang sesuai dengan kebutuhan bisnis Anda
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                        {mainServices.map((service, index) => {
-                            const Icon = service.icon;
-                            return (
-                                <div
-                                    key={index}
-                                    className={`relative rounded-xl border bg-white shadow transition-all duration-300 hover:shadow-elegant hover:-translate-y-2 ${service.popular ? "ring-2 ring-accent ring-offset-2" : ""
-                                        } flex flex-col`}
-                                >
-                                    {service.popular && (
-                                        <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white px-3 py-1 rounded-full text-xs font-semibold shadow">
-                                            Most Popular
-                                        </span>
-                                    )}
-                                    <div className="p-8 flex flex-col flex-1">
-                                        <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mb-6">
-                                            <Icon className="w-8 h-8 text-white" />
-                                        </div>
-                                        <h3 className="text-2xl font-bold text-foreground mb-4">
-                                            {service.title}
-                                        </h3>
-                                        <p className="text-muted-foreground mb-6">{service.description}</p>
-
-                                        <div className="space-y-3 mb-6">
-                                            {service.features.map((feature, idx) => (
-                                                <div key={idx} className="flex items-center">
-                                                    <CheckCircle2 className="w-5 h-5 text-accent mr-3 flex-shrink-0" />
-                                                    <span className="text-sm text-foreground">{feature}</span>
-                                                </div>
-                                            ))}
-                                        </div>
-
-                                        <div className="mt-auto border-t pt-6">
-                                            {/* <p className="text-2xl font-bold text-primary mb-4">{service.price}</p> */}
-                                            <Link
-                                                to="/contact"
-                                                className="w-full inline-flex items-center justify-center gap-2 bg-accent text-white px-4 py-2 rounded-lg font-medium hover:opacity-90 transition"
-                                            >
-                                                Dapatkan Penawaran
-                                                <ArrowRight className="w-4 h-4" />
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                        })}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {serviceFeatures.map((feature, index) => (
+                            <div
+                                key={index}
+                                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                            >
+                                <div className="mb-6">{feature.icon}</div>
+                                <h3 className="text-xl font-bold mb-4 text-gray-800">{feature.title}</h3>
+                                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
-            {/* Additional Services */}
             <section className="py-20 bg-secondary">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                            Layanan Tambahan
-                        </h2>
-                        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                            Layanan pendukung untuk memberikan pengalaman ekspedisi yang sempurna
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {additionalServices.map((service, index) => {
-                            const Icon = service.icon;
-                            return (
-                                <div
-                                    key={index}
-                                    className="text-center rounded-xl border bg-white p-8 shadow hover:shadow-card transition-all duration-300"
-                                >
-                                    <div className="w-16 h-16 bg-gradient-accent rounded-2xl flex items-center justify-center mx-auto mb-6">
-                                        <Icon className="w-8 h-8 text-white" />
+                    <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Spesialisasi Cairan</h2>
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        {liquidTypes.map((type, index) => (
+                            <div key={index} className="bg-white p-8 rounded-xl shadow-lg">
+                                <div className="flex items-center mb-6">
+                                    <div className="bg-gray-100 p-3 rounded-full mr-4">
+                                        {type.icon}
                                     </div>
-                                    <h3 className="text-xl font-semibold text-foreground mb-3">{service.title}</h3>
-                                    <p className="text-muted-foreground">{service.description}</p>
+                                    <h3 className="text-2xl font-bold text-gray-800">{type.category}</h3>
                                 </div>
-                            );
-                        })}
+                                <p className="text-gray-600 mb-6 leading-relaxed">{type.description}</p>
+                                <div className="space-y-3">
+                                    <h4 className="font-semibold text-gray-800">Contoh Produk:</h4>
+                                    {type.examples.map((example, idx) => (
+                                        <div key={idx} className="flex items-center">
+                                            <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0" />
+                                            <span className="text-gray-600">{example}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

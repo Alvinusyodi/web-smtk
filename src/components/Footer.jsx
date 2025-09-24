@@ -13,8 +13,8 @@ const Footer = () => {
                                 <Truck className="w-6 h-6" />
                             </div> */}
                             <div>
-                                <h3 className="text-lg font-bold">PT. Surya Mitra Tirta Kencana</h3>
-                                <p className="text-sm text-primary-foreground/80">Ekspedisi Indonesia</p>
+                                <h3 className="text-lg font-bold">PT. Surya Mitra</h3>
+                                <p className="text-sm text-primary-foreground/80">Tirta Kencana</p>
                             </div>
                         </div>
                         <p className="text-sm text-primary-foreground/80">
@@ -50,17 +50,17 @@ const Footer = () => {
                         <div className="space-y-3">
                             <div className="flex items-center space-x-3">
                                 <Phone className="w-4 h-4 text-primary-foreground/60" />
-                                <span className="text-sm text-primary-foreground/80">+62 21 1234 5678</span>
+                                <span className="text-sm text-primary-foreground/80">(031) 51503872</span>
                             </div>
                             <div className="flex items-center space-x-3">
                                 <Mail className="w-4 h-4 text-primary-foreground/60" />
-                                <span className="text-sm text-primary-foreground/80">info@truckexpress.id</span>
+                                <span className="text-sm text-primary-foreground/80">mail@suryatransport.com</span>
                             </div>
                             <div className="flex items-start space-x-3">
                                 <MapPin className="w-4 h-4 text-primary-foreground/60 mt-0.5" />
                                 <span className="text-sm text-primary-foreground/80">
-                                    Jl. Raya Logistik No. 123<br />
-                                    Jakarta 12345, Indonesia
+                                    Jl. Jemur Andayani 50 Blok A/18 Surabaya 60237 <br />
+                                    Jawa Timur, Indonesia
                                 </span>
                             </div>
                         </div>
@@ -73,8 +73,8 @@ const Footer = () => {
                             <div className="flex items-start space-x-3">
                                 <Clock className="w-4 h-4 text-primary-foreground/60 mt-0.5" />
                                 <div className="text-sm text-primary-foreground/80">
-                                    <p>Senin - Jumat: 08:00 - 18:00</p>
-                                    <p>Sabtu: 08:00 - 16:00</p>
+                                    <p>Senin - Jumat: 08:00 - 17:00 WIB</p>
+                                    <p>Sabtu: 08:00 - 13:00 WIB</p>
                                     <p>Minggu: Tutup</p>
                                     <p className="mt-2 text-accent">Layanan 24/7 untuk tracking</p>
                                 </div>

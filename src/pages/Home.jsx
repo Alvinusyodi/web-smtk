@@ -6,6 +6,7 @@ import {
     MapPin,
     Star,
     Phone,
+    Award,
     ArrowRight
 } from "lucide-react";
 
@@ -14,24 +15,24 @@ import heroImage from "@/assets/hero-trucks.jpg";
 const Home = () => {
     const advantages = [
         {
-            icon: MapPin,
-            title: "Jaringan Luas",
-            description: "Melayani pengiriman ke seluruh wilayah Indonesia dengan jaringan yang luas dan terpercaya."
+            icon: Shield,
+            title: "Armada Terlengkap",
+            description: "Menyediakan beragam jenis armada untuk memenuhi kebutuhan pengangkutan yang fleksibel."
         },
         {
             icon: Clock,
-            title: "Pelacakan Real-time",
-            description: "Pantau status pengiriman Anda secara real-time dengan sistem tracking canggih."
+            title: "Driver Berpengalaman",
+            description: "Driver yang terpercaya dan menjunjung tinggi keamanan demi pengiriman yang lebih aman dan tepat waktu."
         },
         {
-            icon: Shield,
-            title: "Aman & Terpercaya",
-            description: "Barang Anda dijamin aman dengan asuransi dan sistem keamanan berlapis."
+            icon: MapPin,
+            title: "GPS Tracking Real-time",
+            description: "Memungkinkan pelanggan memantau posisi armada kapan saja untuk transparansi maksimal."
         },
         {
-            icon: Phone,
-            title: "Layanan 24/7",
-            description: "Customer service siap melayani Anda 24 jam sehari, 7 hari seminggu."
+            icon: Award,
+            title: "Jaminan Mutu",
+            description: "Tersertifikasi ISO 9001:2015, ISO 45001, serta memiliki sertifikasi Halal."
         }
     ];
 
@@ -93,12 +94,31 @@ const Home = () => {
                 </div>
             </section>
 
+            <section className="py-16 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <div className="bg-blue-50 p-8 rounded-xl">
+                            <h3 className="text-4xl font-bold text-blue-700 mb-2">50+</h3>
+                            <p className="text-gray-600 font-medium">Tahun Pengalaman</p>
+                        </div>
+                        <div className="bg-green-50 p-8 rounded-xl">
+                            <h3 className="text-4xl font-bold text-green-600 mb-2">100+</h3>
+                            <p className="text-gray-600 font-medium">Unit Armada</p>
+                        </div>
+                        <div className="bg-blue-50 p-8 rounded-xl">
+                            <h3 className="text-4xl font-bold text-blue-700 mb-2">1000+</h3>
+                            <p className="text-gray-600 font-medium">Klien Puas</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Advantages Section */}
-            <section className="py-20 bg-background">
+            <section className="py-20 bg-secondary">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                            Mengapa Memilih TruckExpress?
+                            Mengapa Memilih PT. Surya Mitra Tirta Kencana?
                         </h2>
                         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                             Kami memberikan pelayanan terbaik dengan teknologi modern dan pengalaman bertahun-tahun
@@ -130,7 +150,7 @@ const Home = () => {
             </section>
 
             {/* Testimonials Section */}
-            <section className="py-20 bg-secondary">
+            <section className="py-20 bg-backgorund">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">

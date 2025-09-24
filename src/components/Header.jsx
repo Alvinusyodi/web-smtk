@@ -25,8 +25,8 @@ const Header = () => {
                             <Truck className="w-7 h-7 text-white" />
                         </div> */}
                         <div>
-                            <h1 className="text-xl font-bold text-primary">PT. Surya Mitra Tirta Kencana</h1>
-                            <p className="text-sm text-muted-foreground">Ekspedisi Indonesia</p>
+                            <h1 className="text-xl font-bold text-primary">PT. Surya Mitra</h1>
+                            <p className="text-sm text-muted-foreground">Tirta Kencana</p>
                         </div>
                     </Link>
 
